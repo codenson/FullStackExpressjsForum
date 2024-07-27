@@ -36,10 +36,13 @@ html {
   height: 100vh;
   gap: 1rem;
   grid-template-columns: repeat(3, 0.5fr);
+  align-items: center;
+  text-align: center;
 }
 .grid {
   grid: 1 2, 5;
   background-color: rgb(242, 244, 237);
+  /* display: flex; */
 }
 .content {
   color: rgb(43, 38, 34);
