@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+      <%- include("partials/header.ejs")%>
+
+    <!-- <ul>
+   <% for (let i = 0; i < users.length; i++) { %>
+        <li>
+            <h1><%= users[i].userName %></h1>
+            <div>
+                <%= users[i].text %>
+            </div>
+        </li>
+   <% } %>
+</ul> -->
+
+
+<h1><%= currentTopic%>:</h1>
+<hr>
+<div class = "cont">
+
+    <% for (let i = 0; i < users.length; i++) { %>
+        <div >
+    <li>
+        
+      <h2 id="title"><b><%= users[i].userName%></b>: <a href="/threadCommentList?threadId=<%= encodeURIComponent(users[i].threadId) %>">(#<%= users[i].threadId%>)</a></h2></h2>
+      <div class="content">
+        <h3 class = " mydiv" ><%= users[i].text %></h3>
+      </div>
+    </li>
+    </div>
+
+    <% } %>
+</div>
+
+
+
+
+
+    
+</body>
+</html>
